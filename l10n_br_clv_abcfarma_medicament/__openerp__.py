@@ -34,7 +34,7 @@
         'security/clv_abcfarma_medicament_security.xml',
         'security/ir.model.access.csv',
         'clv_abcfarma_medicament_view.xml',
-        # 'tag/clv_tag_view.xml',
+        'tag/clv_tag_view.xml',
         # 'annotation/clv_annotation_view.xml',
         'menu/clv_abcfarma_medicament_menu_view.xml',
         ],
