@@ -5,6 +5,4 @@
 #
 ###############################################################################
 
-import clv_abcfarma_medicament
-import tag
-import annotation
+import clv_annotation
