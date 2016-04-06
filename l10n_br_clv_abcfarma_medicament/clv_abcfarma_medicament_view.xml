@@ -50,10 +50,23 @@
                                     <group>
                                         <field name="is_product"/>
                                         <field name="is_fraction"/>
+                                        <field name="for_hospital_use"/>
                                         <field name="ean13"/>
                                     </group>
                                     <group string="Status">
                                         <field name="date_inclusion"/>
+                                    </group>
+                                    <group>
+                                        <field name="med_abc"/>
+                                        <field name="med_ctr"/>
+                                        <field name="med_lab"/>
+                                        <field name="lab_nom"/>
+                                        <field name="med_des"/>
+                                        <field name="med_apr"/>
+                                        <field name="med_barra"/>
+                                        <field name="med_gene"/>
+                                        <field name="med_negpos"/>
+                                        <field name="med_princi"/>
                                     </group>
                                 </group>
                                 <field name="notes" placeholder="Notes..." colspan="4"/>
@@ -84,6 +97,7 @@
                     <field name="code"/>
                     <field name="is_product"/>
                     <field name="is_fraction"/>
+                    <field name="for_hospital_use"/>
                     <field name="notes"/>
                     <field name="ean13"/>
                 </tree>
@@ -109,6 +123,8 @@
                     <filter string="Product" name="product" domain="[('is_product','=',1)]"/>
                     <filter string="Not a Fraction" name="not_fraction" domain="[('is_fraction','=',0)]"/>
                     <filter string="Fraction" name="fraction" domain="[('is_fraction','=',1)]"/>
+                    <filter string="Not For Hospital Use" name="not_for_hospital_use" domain="[('for_hospital_use','=',0)]"/>
+                    <filter string="For Hospital Use" name="for_hospital_use" domain="[('for_hospital_use','=',1)]"/>
                     <filter string="Missing ABCFarma Medicament Code" name="product" domain="[('code','=',False)]"/>
                     <filter string="Missing Active Component" name="missing_active_component" domain="[('active_component','=',False)]"/>
                     <filter string="Missing Manufacturer" name="missing_manufacturer" domain="[('manufacturer','=',False)]"/>
