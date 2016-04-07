@@ -36,6 +36,8 @@
         'clv_abcfarma_medicament_view.xml',
         'tag/clv_tag_view.xml',
         'annotation/clv_annotation_view.xml',
+        'abcfarma_list/clv_abcfarma_medicament_list_view.xml',
+        'abcfarma_list/clv_abcfarma_medicament_list_item_view.xml',
         'menu/clv_abcfarma_medicament_menu_view.xml',
         ],
     'demo': [],

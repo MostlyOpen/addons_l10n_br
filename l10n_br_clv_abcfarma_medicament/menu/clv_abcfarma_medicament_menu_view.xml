@@ -9,17 +9,17 @@
             sequence="60"
             action="l10n_br_clv_abcfarma_medicament.act_open_clv_abcfarma_medicament_view" />
             <!-- Pharmacy/Medicament/ABCFarma Medicaments/Lists -->
-<!--             <menuitem name="Lists" id="menu_pharmacy_medicament_abcfarma_medicaments_lists"
+            <menuitem name="Lists" id="menu_pharmacy_medicament_abcfarma_medicaments_lists"
                 parent="l10n_br_clv_abcfarma_medicament.menu_pharmacy_medicament_abcfarma_medicaments"
                 groups="clv_base.group_abcfarma_medicament_user"
                 sequence="10"
                 action="l10n_br_clv_abcfarma_medicament.act_open_clv_abcfarma_medicament_list_view"/>
- -->                <!-- Pharmacy/Medicament/ABCFarma Medicaments/Lists/Items -->
-<!--                 <menuitem name="Items" id="menu_pharmacy_medicament_abcfarma_medicaments_lists_items"
-                    parent="l10n_br_clv_abcfarma_medicament.menu_pharmacy_medicament_abcfarma_medicament_lists"
-                    groups="clv_base.group_abcfarma_medicament_user"
-                    sequence="10"
-                    action="l10n_br_clv_abcfarma_medicament.act_open_clv_abcfarma_medicament_list_item_view"/>
- -->
+            <!-- Pharmacy/Medicament/ABCFarma Medicaments/List Items -->
+            <menuitem name="List Items" id="menu_pharmacy_medicament_abcfarma_medicaments_list_items"
+                parent="l10n_br_clv_abcfarma_medicament.menu_pharmacy_medicament_abcfarma_medicaments"
+                groups="clv_base.group_abcfarma_medicament_user"
+                sequence="20"
+                action="l10n_br_clv_abcfarma_medicament.act_open_clv_abcfarma_medicament_list_item_view"/>
+
     </data>
 </openerp>
