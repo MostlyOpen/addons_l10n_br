@@ -5,7 +5,5 @@
 #
 ###############################################################################
 
-import clv_cmed_medicament
-# import tag
-# import annotation
-import cmed_list
+import clv_cmed_medicament_list
+import clv_cmed_medicament_list_item

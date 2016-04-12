@@ -9,17 +9,17 @@
             sequence="50"
             action="l10n_br_clv_cmed_medicament.act_open_clv_cmed_medicament_view" />
             <!-- Pharmacy/Medicament/CMED Medicaments/Lists -->
-<!--             <menuitem name="Lists" id="menu_pharmacy_medicament_cmed_medicaments_lists"
+            <menuitem name="Lists" id="menu_pharmacy_medicament_cmed_medicaments_lists"
                 parent="l10n_br_clv_cmed_medicament.menu_pharmacy_medicament_cmed_medicaments"
                 groups="clv_base.group_cmed_medicament_user"
                 sequence="10"
                 action="l10n_br_clv_cmed_medicament.act_open_clv_cmed_medicament_list_view"/>
- -->            <!-- Pharmacy/Medicament/CMED Medicaments/List Items -->
-<!--             <menuitem name="List Items" id="menu_pharmacy_medicament_cmed_medicaments_list_items"
+            <!-- Pharmacy/Medicament/CMED Medicaments/List Items -->
+            <menuitem name="List Items" id="menu_pharmacy_medicament_cmed_medicaments_list_items"
                 parent="l10n_br_clv_cmed_medicament.menu_pharmacy_medicament_cmed_medicaments"
                 groups="clv_base.group_cmed_medicament_user"
                 sequence="20"
                 action="l10n_br_clv_cmed_medicament.act_open_clv_cmed_medicament_list_item_view"/>
- -->
+
     </data>
 </openerp>
