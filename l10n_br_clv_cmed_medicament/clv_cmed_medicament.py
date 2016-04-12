@@ -12,13 +12,17 @@ class CMEDMedicament(models.Model):
     _name = 'clv_cmed_medicament'
     _inherit = 'clv_medicament.model'
 
-    # med_abc = fields.Char(size=9, string='MED_ABC')
-    # med_ctr = fields.Char(size=1, string='MED_CTR')
-    # med_lab = fields.Char(size=6, string='MED_LAB')
-    # lab_nom = fields.Char(size=30, string='LAB_NOM')
-    # med_des = fields.Char(size=45, string='MED_DES')
-    # med_apr = fields.Char(size=45, string='MED_APR')
-    # med_barra = fields.Char(size=13, string='MED_BARRA')
-    # med_gene = fields.Char(size=3, string='MED_GENE')
-    # med_negpos = fields.Char(size=1, string='MED_NEGPOS')
-    # med_princi = fields.Char(size=130, string='MED_PRINCI')
+    principio_ativo = fields.Char(size=128, string='Principio Ativo')
+    cnpj = fields.Char(size=128, string='CNPJ')
+    latoratorio = fields.Char(size=128, string='Laboratorio')
+    codigo_ggrem = fields.Char(size=15, string='Codigo GGREM (2)')
+    registro = fields.Char(size=13, string='Registro')
+    ean = fields.Char(size=13, string='EAN')
+    produto = fields.Char(size=128, string='Produto')
+    apresentacao = fields.Char(size=128, string='Apresentacao')
+    classe_terapeutica = fields.Char(size=128, string='Classe Terapeutica')
+
+    restr_hospitalar = fields.Char(size=256, string='RESTRICAO_HOSPITALAR')
+    cap = fields.Char(size=256, string='CAP')
+    confaz_87 = fields.Char(size=256, string='CONFAZ_87')
+    analise_recursal = fields.Char(size=256, string='ANALISE_RECURSAL')

@@ -56,18 +56,21 @@
                                     <group string="Status">
                                         <field name="date_inclusion"/>
                                     </group>
-                                    <!--group>
-                                        <field name="med_abc"/>
-                                        <field name="med_ctr"/>
-                                        <field name="med_lab"/>
-                                        <field name="lab_nom"/>
-                                        <field name="med_des"/>
-                                        <field name="med_apr"/>
-                                        <field name="med_barra"/>
-                                        <field name="med_gene"/>
-                                        <field name="med_negpos"/>
-                                        <field name="med_princi"/>
-                                    </group-->
+                                    <group>
+                                        <field name="principio_ativo" default_focus="1"/>
+                                        <field name="cnpj"/>
+                                        <field name="latoratorio"/>
+                                        <field name="codigo_ggrem"/>
+                                        <field name="registro"/>
+                                        <field name="ean"/>
+                                        <field name="produto"/>
+                                        <field name="apresentacao"/>
+                                        <field name="classe_terapeutica"/>
+                                        <field name="restr_hospitalar"/>
+                                        <field name="cap"/>
+                                        <field name="confaz_87"/>
+                                        <field name="analise_recursal"/>
+                                    </group>
                                 </group>
                                 <field name="notes" placeholder="Notes..." colspan="4"/>
                             </page>

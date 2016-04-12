@@ -51,36 +51,25 @@
                         <notebook>
                             <page string="Prices">
                                 <group>
-                                    <!--group>
-                                        <field name="med_pco12"/>
-                                        <field name="med_pla12"/>
-                                        <field name="med_fra12"/>
-                                        <field name="med_pco17"/>
-                                        <field name="med_pla17"/>
-                                        <field name="med_fra17"/>
-                                        <field name="med_pco18"/>
-                                        <field name="med_pla18"/>
-                                        <field name="med_fra18"/>
-                                    </group-->
-                                    <!--group>
-                                        <field name="med_pco19"/>
-                                        <field name="med_pla19"/>
-                                        <field name="med_fra19"/>
-                                        <field name="med_pco0"/>
-                                        <field name="med_pla0"/>
-                                        <field name="med_fra0"/>
-                                        <field name="med_pcozfm"/>
-                                        <field name="med_plazfm"/>
-                                        <field name="med_frazfm"/>
-                                    </group-->
-                                    <!--group>
-                                        <field name="med_uni"/>
-                                        <field name="med_ipi"/>
-                                        <field name="med_dtvig"/>
-                                        <field name="exp_13"/>
-                                        <field name="med_regims"/>
-                                        <field name="med_varpre"/>
-                                    </group-->
+                                    <group>
+                                        <field name="pf_0"/>
+                                        <field name="pf_12"/>
+                                        <field name="pf_17"/>
+                                        <field name="pf_18"/>
+                                        <field name="pf_19"/>
+                                        <field name="pf_17_zfm"/>
+                                    </group>
+                                    <group>
+                                        <field name="pmc_0"/>
+                                        <field name="pmc_12"/>
+                                        <field name="pmc_17"/>
+                                        <field name="pmc_18"/>
+                                        <field name="pmc_19"/>
+                                        <field name="pmc_17_zfm"/>
+                                    </group>
+                                    <group>
+                                        <field name="ultima_alteracao"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="Other Information">
