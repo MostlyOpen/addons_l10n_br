@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Pharmacy/Medicament/ORZ Medicaments -->
+        <menuitem name="ORZ Medicaments" id="menu_pharmacy_medicament_orz_medicaments"
+            parent="clv_base.menu_pharmacy_medicament"
+            groups="clv_base.group_orz_medicament_user"
+            sequence="60"
+            action="l10n_br_clv_orz_medicament.act_open_clv_orz_medicament_view" />
+            <!-- Pharmacy/Medicament/ORZ Medicaments/Lists -->
+            <menuitem name="Lists" id="menu_pharmacy_medicament_orz_medicaments_lists"
+                parent="l10n_br_clv_orz_medicament.menu_pharmacy_medicament_orz_medicaments"
+                groups="clv_base.group_orz_medicament_user"
+                sequence="10"
+                action="l10n_br_clv_orz_medicament.act_open_clv_orz_medicament_list_view"/>
+            <!-- Pharmacy/Medicament/ORZ Medicaments/List Items -->
+            <menuitem name="List Items" id="menu_pharmacy_medicament_orz_medicaments_list_items"
+                parent="l10n_br_clv_orz_medicament.menu_pharmacy_medicament_orz_medicaments"
+                groups="clv_base.group_orz_medicament_user"
+                sequence="20"
+                action="l10n_br_clv_orz_medicament.act_open_clv_orz_medicament_list_item_view"/>
+
+    </data>
+</openerp>
