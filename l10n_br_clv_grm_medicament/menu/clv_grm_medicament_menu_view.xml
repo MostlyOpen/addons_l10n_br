@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Pharmacy/Medicament/GRM Medicaments -->
+        <menuitem name="GRM Medicaments" id="menu_pharmacy_medicament_grm_medicaments"
+            parent="clv_base.menu_pharmacy_medicament"
+            groups="clv_base.group_grm_medicament_user"
+            sequence="70"
+            action="l10n_br_clv_grm_medicament.act_open_clv_grm_medicament_view" />
+            <!-- Pharmacy/Medicament/GRM Medicaments/Lists -->
+            <menuitem name="Lists" id="menu_pharmacy_medicament_grm_medicaments_lists"
+                parent="l10n_br_clv_grm_medicament.menu_pharmacy_medicament_grm_medicaments"
+                groups="clv_base.group_grm_medicament_user"
+                sequence="10"
+                action="l10n_br_clv_grm_medicament.act_open_clv_grm_medicament_list_view"/>
+            <!-- Pharmacy/Medicament/GRM Medicaments/List Items -->
+            <menuitem name="List Items" id="menu_pharmacy_medicament_grm_medicaments_list_items"
+                parent="l10n_br_clv_grm_medicament.menu_pharmacy_medicament_grm_medicaments"
+                groups="clv_base.group_grm_medicament_user"
+                sequence="20"
+                action="l10n_br_clv_grm_medicament.act_open_clv_grm_medicament_list_item_view"/>
+
+    </data>
+</openerp>
