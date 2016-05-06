@@ -32,6 +32,39 @@ class ABCFarmaMedicamentListItem(models.Model):
     order = fields.Integer(string='Order',
                            default=10)
 
+    name = fields.Char('Product Name', related='medicament_id.name')
+    ean13 = fields.Char('EAN13 Barcode', related='medicament_id.ean13')
+    code = fields.Char('Medicament Code', related='medicament_id.code')
+    medicament_name = fields.Char('Medicament Name', related='medicament_id.medicament_name')
+    concentration = fields.Char('Concentration', related='medicament_id.concentration')
+    presentation = fields.Char('Presentation', related='medicament_id.presentation')
+    pres_form = fields.Many2one('clv_medicament.form', string='Presentation Form',
+                                related='medicament_id.pres_form')
+    pres_quantity = fields.Float('Presentation Quantity', related='medicament_id.pres_quantity')
+    pres_quantity_unit = fields.Many2one('clv_medicament.uom', string='Presentation Quantity Unit',
+                                         related='medicament_id.pres_quantity_unit')
+    notes = fields.Text('Notes', related='medicament_id.notes')
+    date_inclusion = fields.Datetime("Inclusion Date", related='medicament_id.date_inclusion')
+    is_product = fields.Boolean('Is a Product', related='medicament_id.is_product')
+    is_fraction = fields.Boolean('Is a Fraction', related='medicament_id.is_fraction')
+    for_hospital_use = fields.Boolean('For Hospital Use', related='medicament_id.for_hospital_use')
+
+    active_component = fields.Many2one('clv_medicament.active_component', string='Active Component',
+                                       related='medicament_id.active_component')
+    manufacturer = fields.Many2one('clv_medicament.manufacturer', string='Manufacturer',
+                                   related='medicament_id.manufacturer')
+
+    med_abc = fields.Char('MED_ABC', related='medicament_id.med_abc')
+    med_ctr = fields.Char('MED_CTR', related='medicament_id.med_ctr')
+    med_lab = fields.Char('MED_LAB', related='medicament_id.med_lab')
+    lab_nom = fields.Char('LAB_NOM', related='medicament_id.lab_nom')
+    med_des = fields.Char('MED_DES', related='medicament_id.med_des')
+    med_apr = fields.Char('MED_APR', related='medicament_id.med_apr')
+    med_barra = fields.Char('MED_BARRA', related='medicament_id.med_barra')
+    med_gene = fields.Char('MED_GENE', related='medicament_id.med_gene')
+    med_negpos = fields.Char('MED_NEGPOS', related='medicament_id.med_negpos')
+    med_princi = fields.Char('MED_PRINCI', related='medicament_id.med_princi')
+
     med_uni = fields.Float(string='MED_UNI')
     med_ipi = fields.Float(string='MED_IPI')
     med_dtvig = fields.Date('MED_DTVIG')

@@ -33,6 +33,54 @@
                             <!-- Put here related buttons -->
                         </div>
                         <notebook>
+                            <page string="Medicament Information">
+                                <group>
+                                    <group name="A">
+                                        <field name="name" readonly="True"/>
+                                        <field name="code" readonly="True"/>
+                                        <field name="medicament_name" readonly="True"/>
+                                    </group>
+                                    <group name="B">
+                                        <field name="presentation" readonly="True"/>
+                                    </group>
+                                    <group name="X">
+                                        <field name="active_component" readonly="True"/>
+                                        <field name="concentration" readonly="True"/>
+                                        <field name="pres_form" readonly="True"/>
+                                        <field name="pres_quantity" readonly="True"/>
+                                        <field name="pres_quantity_unit" readonly="True"/>
+                                    </group>
+                                    <group name="Y">
+                                        <field name="manufacturer" readonly="True"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="ABCFarma Medicament Information">
+                                <group>
+                                    <group>
+                                        <field name="is_product" readonly="True"/>
+                                        <field name="is_fraction" readonly="True"/>
+                                        <field name="for_hospital_use" readonly="True"/>
+                                        <field name="ean13" readonly="True"/>
+                                    </group>
+                                    <group string="Status">
+                                        <field name="date_inclusion" readonly="True"/>
+                                    </group>
+                                    <group>
+                                        <field name="med_abc" readonly="True"/>
+                                        <field name="med_ctr" readonly="True"/>
+                                        <field name="med_lab" readonly="True"/>
+                                        <field name="lab_nom" readonly="True"/>
+                                        <field name="med_des" readonly="True"/>
+                                        <field name="med_apr" readonly="True"/>
+                                        <field name="med_barra" readonly="True"/>
+                                        <field name="med_gene" readonly="True"/>
+                                        <field name="med_negpos" readonly="True"/>
+                                        <field name="med_princi" readonly="True"/>
+                                    </group>
+                                </group>
+                                <field name="notes" placeholder="Notes..." colspan="4"/>
+                            </page>
                             <page string="Prices">
                                 <group>
                                     <group>
