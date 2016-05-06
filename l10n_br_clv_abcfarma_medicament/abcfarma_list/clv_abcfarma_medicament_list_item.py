@@ -94,7 +94,7 @@ class ABCFarmaMedicamentListItem(models.Model):
                             help='The active field allows you to hide the list item without removing it.',
                             default=1)
 
-    _order = 'order'
+    _order = 'list_id, order'
 
 
 class ABCFarmaMedicamentList(models.Model):

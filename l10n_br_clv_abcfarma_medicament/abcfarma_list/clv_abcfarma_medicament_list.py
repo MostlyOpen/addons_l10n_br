@@ -32,6 +32,8 @@ class ABCFarmaMedicamentList(models.Model):
                             help='The active field allows you to hide the list without removing it.',
                             default=1)
 
+    _order = 'name'
+
     _sql_constraints = [
         ('uniq_list_name', 'unique(name)', "Error! The List Name must be unique!"),
         ('uniq_list_code', 'unique(code)', "Error! The List Code must be unique!"),
