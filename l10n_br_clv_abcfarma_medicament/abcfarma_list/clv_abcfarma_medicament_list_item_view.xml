@@ -28,27 +28,59 @@
                             <h3>
                                 <field name="order" placeholder="Order..."/>
                             </h3>
-                            <!--label for="pmc"/>
-                            <h3>
-                                <field name="pmc" placeholder="PMC..."/>
-                            </h3-->
-                            <!--label for="desconto"/>
-                            <h3>
-                                <field name="desconto" placeholder="Discount..."/>
-                            </h3-->
-                            <!--label for="preco_venda"/>
-                            <h3>
-                                <field name="preco_venda" placeholder="Preço Venda..."/>
-                            </h3-->
-                            <!--label for="included"/>
-                            <h3>
-                                <field name="included"/>
-                            </h3-->
                         </div>
                         <div class="oe_right oe_button_box" name="button_box">
                             <!-- Put here related buttons -->
                         </div>
                         <notebook>
+                            <page string="Medicament Information">
+                                <group>
+                                    <group name="A">
+                                        <field name="name" readonly="True"/>
+                                        <field name="code" readonly="True"/>
+                                        <field name="medicament_name" readonly="True"/>
+                                    </group>
+                                    <group name="B">
+                                        <field name="presentation" readonly="True"/>
+                                    </group>
+                                    <group name="X">
+                                        <field name="active_component" readonly="True"/>
+                                        <field name="concentration" readonly="True"/>
+                                        <field name="pres_form" readonly="True"/>
+                                        <field name="pres_quantity" readonly="True"/>
+                                        <field name="pres_quantity_unit" readonly="True"/>
+                                    </group>
+                                    <group name="Y">
+                                        <field name="manufacturer" readonly="True"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="ABCFarma Medicament Information">
+                                <group>
+                                    <group>
+                                        <field name="is_product" readonly="True"/>
+                                        <field name="is_fraction" readonly="True"/>
+                                        <field name="for_hospital_use" readonly="True"/>
+                                        <field name="ean13" readonly="True"/>
+                                    </group>
+                                    <group string="Status">
+                                        <field name="date_inclusion" readonly="True"/>
+                                    </group>
+                                    <group>
+                                        <field name="med_abc" readonly="True"/>
+                                        <field name="med_ctr" readonly="True"/>
+                                        <field name="med_lab" readonly="True"/>
+                                        <field name="lab_nom" readonly="True"/>
+                                        <field name="med_des" readonly="True"/>
+                                        <field name="med_apr" readonly="True"/>
+                                        <field name="med_barra" readonly="True"/>
+                                        <field name="med_gene" readonly="True"/>
+                                        <field name="med_negpos" readonly="True"/>
+                                        <field name="med_princi" readonly="True"/>
+                                    </group>
+                                </group>
+                                <field name="notes" placeholder="Notes..." colspan="4"/>
+                            </page>
                             <page string="Prices">
                                 <group>
                                     <group>
@@ -124,10 +156,6 @@
                     <field name="list_id"/>
                     <field name="medicament_id"/>
                     <field name="order"/>
-                    <!--field name="pmc"/-->
-                    <!--field name="desconto"/-->
-                    <!--field name="preco_venda"/-->
-                    <!--field name="included"/-->
                     <field name="notes"/>
                     <separator/>
                     <group expand="0" string="Group By...">
@@ -160,6 +188,12 @@
             <field name="inherit_id" ref="view_clv_abcfarma_medicament_list_form"/>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
+                <label for="description" position="before">
+                    <label for="count_items"/>
+                    <h3>
+                        <field name="count_items"/>
+                    </h3>
+                </label>
                 <page string="Settings" position="before">
                     <page string="ABCFarma List Itens">
                         <group>
@@ -167,6 +201,18 @@
                         </group>
                     </page>
                 </page>
+            </field>
+        </record>
+
+        <record id="view_clv_abcfarma_medicament_list_tree_item" model="ir.ui.view">
+            <field name="name">clv_abcfarma_medicament.list.tree</field>
+            <field name="model">clv_abcfarma_medicament.list</field>
+            <field name="inherit_id" ref="view_clv_abcfarma_medicament_list_tree"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="count_items"/>
+                </field>
             </field>
         </record>
 
