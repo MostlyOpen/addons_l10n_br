@@ -28,22 +28,6 @@
                             <h3>
                                 <field name="order" placeholder="Order..."/>
                             </h3>
-                            <!--label for="pmc"/>
-                            <h3>
-                                <field name="pmc" placeholder="PMC..."/>
-                            </h3-->
-                            <!--label for="desconto"/>
-                            <h3>
-                                <field name="desconto" placeholder="Discount..."/>
-                            </h3-->
-                            <!--label for="preco_venda"/>
-                            <h3>
-                                <field name="preco_venda" placeholder="Preço Venda..."/>
-                            </h3-->
-                            <!--label for="included"/>
-                            <h3>
-                                <field name="included"/>
-                            </h3-->
                         </div>
                         <div class="oe_right oe_button_box" name="button_box">
                             <!-- Put here related buttons -->
@@ -124,10 +108,6 @@
                     <field name="list_id"/>
                     <field name="medicament_id"/>
                     <field name="order"/>
-                    <!--field name="pmc"/-->
-                    <!--field name="desconto"/-->
-                    <!--field name="preco_venda"/-->
-                    <!--field name="included"/-->
                     <field name="notes"/>
                     <separator/>
                     <group expand="0" string="Group By...">
@@ -160,6 +140,12 @@
             <field name="inherit_id" ref="view_clv_abcfarma_medicament_list_form"/>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
+                <label for="description" position="before">
+                    <label for="count_items"/>
+                    <h3>
+                        <field name="count_items"/>
+                    </h3>
+                </label>
                 <page string="Settings" position="before">
                     <page string="ABCFarma List Itens">
                         <group>
@@ -167,6 +153,18 @@
                         </group>
                     </page>
                 </page>
+            </field>
+        </record>
+
+        <record id="view_clv_abcfarma_medicament_list_tree_item" model="ir.ui.view">
+            <field name="name">clv_abcfarma_medicament.list.tree</field>
+            <field name="model">clv_abcfarma_medicament.list</field>
+            <field name="inherit_id" ref="view_clv_abcfarma_medicament_list_tree"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="count_items"/>
+                </field>
             </field>
         </record>
 

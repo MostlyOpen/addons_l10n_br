@@ -18,7 +18,7 @@
 #
 ###############################################################################
 
-from openerp import models, fields
+from openerp import models, fields, api
 
 
 class ABCFarmaMedicamentListItem(models.Model):
@@ -70,3 +70,12 @@ class ABCFarmaMedicamentList(models.Model):
     abcfarma_list_item_ids = fields.One2many('clv_abcfarma_medicament.list.item',
                                              'list_id',
                                              'ABCFarma List Itens')
+    count_items = fields.Integer(
+        'Number of Items',
+        compute='_compute_count_items'
+    )
+
+    @api.depends('abcfarma_list_item_ids')
+    def _compute_count_items(self):
+        for r in self:
+            r.count_items = len(r.abcfarma_list_item_ids)
