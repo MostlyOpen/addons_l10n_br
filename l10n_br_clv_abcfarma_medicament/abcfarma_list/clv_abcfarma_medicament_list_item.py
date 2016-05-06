@@ -1,7 +1,20 @@
 # -*- coding: utf-8 -*-
 ###############################################################################
 #
-# For copyright and license notices, see __openerp__.py file in root directory
+# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
 
@@ -18,9 +31,6 @@ class ABCFarmaMedicamentListItem(models.Model):
     notes = fields.Text(string='Notes')
     order = fields.Integer(string='Order',
                            default=10)
-    # pmc = fields.Float(string='PMC [R$]')
-    # desconto = fields.Float(string='Desconto [%]')
-    # preco_venda = fields.Float(string='Preço Venda [%]')
 
     med_uni = fields.Float(string='MED_UNI')
     med_ipi = fields.Float(string='MED_IPI')
@@ -47,7 +57,6 @@ class ABCFarmaMedicamentListItem(models.Model):
     med_pco0 = fields.Float(string='MED_PCO0')
     med_pla0 = fields.Float(string='MED_PLA0')
     med_fra0 = fields.Float(string='MED_FRA0')
-    # included = fields.Boolean('Included')
     active = fields.Boolean('Active',
                             help='The active field allows you to hide the list item without removing it.',
                             default=1)
